@@ -90,3 +90,66 @@ Top fraud-predicting features (from SHAP & correlation analysis):
 ---
 
 ## 📂 Project Structure
+
+fraud-detection/
+├── app.py                  # Streamlit web application
+├── fraud_model.pkl         # Trained XGBoost model
+├── feature_names.pkl       # Feature column names
+├── scaler_stats.pkl        # Scaler parameters for Amount & Time
+├── requirements.txt        # Python dependencies
+└── README.md               # This file
+
+---
+
+## 🚀 Run Locally
+
+```bash
+# Clone the repo
+git clone https://github.com/senu045/fraud-detection.git
+cd fraud-detection
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Launch the app
+streamlit run app.py
+```
+
+---
+
+## 📊 Dataset
+
+- **Source:** [Kaggle — Credit Card Fraud Detection by ULB](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud)
+- **Size:** 284,807 transactions | 492 fraud cases (0.173%)
+- **Features:** V1–V28 (PCA-anonymised by the bank) + Amount + Time
+- **No missing values** — perfectly clean dataset
+
+---
+
+## 💡 Key Learnings
+
+- Why **accuracy is a misleading metric** for imbalanced classification problems
+- How **SMOTE** creates synthetic minority samples without simple duplication
+- How **SHAP values** make black-box ML models interpretable for business
+- How **decision threshold tuning** translates model scores into real business decisions
+- How to deploy a **production-ready ML app** using Streamlit
+
+---
+
+## 👩‍💻 Author
+
+**Senuri Ganegoda**
+- 🎓 BSc (Hons) Computer Science — Data Science, University of Kelaniya
+- 💼 Data & Analytics Intern — Dialog Axiata PLC
+- 🔗 [LinkedIn](https://linkedin.com/in/senuri-ganegoda)
+- 🐙 [GitHub](https://github.com/senu045)
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+*⭐ If you found this project useful, please give it a star!*
